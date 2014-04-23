@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --ui exports --reporter spec"
   },
   "keywords": [
     "pie",
@@ -12,5 +12,11 @@
     "angle"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vec2d": "0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2"
+  }
 }

@@ -11,15 +11,15 @@ var whatSliceTests = module.exports['#whatSlice()'] = {}
 
 var sliced = pie.slice(4)
 whatSliceTests['4 slices with first slice at angle 0'] = makeTestCases([
-  ['point at top',          sliced, ref, {x: 0, y: 1}, 0],
-  ['point at top-right',    sliced, ref, {x: 1, y: 1}, 0],
-  ['point at right',        sliced, ref, {x: 1, y: 0}, 1],
-  ['point at bottom-right', sliced, ref, {x: 1, y: -1}, 1],
-  ['point at bottom',       sliced, ref, {x: 0, y: -1}, 2],
-  ['point at bottom-left',  sliced, ref, {x: -1, y: -1}, 2],
-  ['point at left',         sliced, ref, {x: -1, y: 0}, 3],
-  ['point at top-left',     sliced, ref, {x: -1, y: 1}, 3],
-  ['point at same as ref',  sliced, ref, ref, 1]
+  ['point at N',   sliced, ref, {x: 0, y: 1}, 0],
+  ['point at NE',  sliced, ref, {x: 1, y: 1}, 0],
+  ['point at E',   sliced, ref, {x: 1, y: 0}, 1],
+  ['point at SE',  sliced, ref, {x: 1, y: -1}, 1],
+  ['point at S',   sliced, ref, {x: 0, y: -1}, 2],
+  ['point at SW',  sliced, ref, {x: -1, y: -1}, 2],
+  ['point at W',   sliced, ref, {x: -1, y: 0}, 3],
+  ['point at NW',  sliced, ref, {x: -1, y: 1}, 3],
+  ['point at ref', sliced, ref, ref, 1]
 ])
 
 function makeTestCases(testCases) {

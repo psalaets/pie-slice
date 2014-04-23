@@ -75,13 +75,11 @@ module.exports = {
   slice: function(number, options) {
     var slices = []
 
-    var step = 360 / number;
+    var step = 360 / number
     for (var i = 0; i < number; i++) {
       slices.push(createSlice(i, i * step, i * step + step))
     }
 
-    var pie = createPie(slices)
-
-    return pie
+    return createPie(slices)
   }
 }

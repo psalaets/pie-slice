@@ -31,10 +31,10 @@ var pieMethods = {
   whatSlice: function(referencePoint, otherPoint) {
     var delta = vec2d(otherPoint).minus(vec2d(referencePoint))
     var weird = radiansToWeird(delta.angle())
-    var angle = weirdToCompass(weird)
+    var compass = weirdToCompass(weird)
 
     for (var i = 0; i < this.slices.length; i++) {
-      if (this.slices[i].contains(angle)) {
+      if (this.slices[i].contains(compass)) {
         return this.slices[i].number
       }
     }
@@ -73,11 +73,28 @@ function createPie(slices) {
 
 module.exports = {
   slice: function(number, options) {
+    options = options || {}
     var slices = []
 
     var step = 360 / number
-    for (var i = 0; i < number; i++) {
-      slices.push(createSlice(i, i * step, i * step + step))
+    var halfStep = step / 2
+    var min = 0
+    var max = min + step
+    var sliceNumber = 0
+
+    if (options.firstSliceFacesUp) {
+      // first slice straddles angle 0 and is actually two slices
+      slices.push(createSlice(0, 360 - halfStep, 360))
+      slices.push(createSlice(0, 0, halfStep))
+
+      // tweak to account for first slice already existing
+      sliceNumber = 1
+      min = halfStep
+      max = min + step
+    }
+
+    for (; sliceNumber < number; sliceNumber++, min += step, max += step) {
+      slices.push(createSlice(sliceNumber, min, max))
     }
 
     return createPie(slices)

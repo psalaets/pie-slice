@@ -2,6 +2,10 @@
 
 Divide circle into slices and tell what slice a point is in.
 
+## Install
+
+    npm install pie-slice
+
 ## Usage
 
 ```

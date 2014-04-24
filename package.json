@@ -1,6 +1,6 @@
 {
   "name": "pie-slice",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Divide circle into slices and tell what slice a point is in relative to circle's center",
   "main": "index.js",
   "scripts": {

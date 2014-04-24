@@ -72,6 +72,16 @@ function createPie(slices) {
 }
 
 module.exports = {
+  /**
+   * Create a pie with certain number of slices.
+   *
+   * @param number Number of slices
+   * @param options Hash of extra options. Options:
+   *    - firstSliceFacesUp - true to make first slice point straight up so it's
+   *      bissected by angle 0. Otherwise first slice *begins* at angle 0.
+   *      Defaults to false.
+   * @return sliced pie
+   */
   slice: function(number, options) {
     options = options || {}
     var slices = []
@@ -83,7 +93,7 @@ module.exports = {
     var sliceNumber = 0
 
     if (options.firstSliceFacesUp) {
-      // first slice straddles angle 0 and is actually two slices
+      // first slice straddles angle 0 and is actually two slice objects
       slices.push(createSlice(0, 360 - halfStep, 360))
       slices.push(createSlice(0, 0, halfStep))
 

@@ -1,13 +1,32 @@
 var assert = require('assert')
 var pie = require('..')
 
-// all tests use orgin as reference point for simplicity
+exports['.slice()'] = {
+  "sliceCount can be between 2 and 360, inclusive": function() {
+    // just check for no blowups
+    pie.slice(2)
+    pie.slice(100)
+    pie.slice(360)
+  },
+  "sliceCount cannot be < 2": function() {
+    assert.throws(function() {
+      pie.slice(1)
+    })
+  },
+  "sliceCount cannot be > 360": function() {
+    assert.throws(function() {
+      pie.slice(361)
+    })
+  }
+}
+
+// all whatSlice tests use orgin as reference point for simplicity
 var ref = {
   x: 0,
   y: 0
 }
 
-var whatSliceTests = module.exports['#whatSlice()'] = {}
+var whatSliceTests = exports['#whatSlice()'] = {}
 
 var sliced = pie.slice(4)
 whatSliceTests['4 slices with first slice at angle 0'] = makeTestCases([

@@ -1,7 +1,7 @@
 {
   "name": "pie-slice",
   "version": "0.1.0",
-  "description": "",
+  "description": "Divide circle into slices and tell what slice a point is in relative to circle's center",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --ui exports --reporter spec"
@@ -11,7 +11,7 @@
     "slice",
     "angle"
   ],
-  "author": "",
+  "author": "Paul Salaets <psalaets@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "vec2d": "0.2.0"

@@ -1,7 +1,7 @@
 {
   "name": "pie-slice",
   "version": "1.0.0",
-  "description": "Divide circle into slices and tell what slice a point is in relative to circle's center",
+  "description": "Divide circle into slices and tell what slice a point is in",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --ui exports --reporter spec"

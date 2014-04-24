@@ -1,6 +1,6 @@
 # pie-slice
 
-Divide a circle into slices and tell what slice a point is in relative to circle's center.
+Divide circle into slices and tell what slice a point is in.
 
 ## Usage
 

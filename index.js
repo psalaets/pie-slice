@@ -45,6 +45,6 @@ module.exports = {
       slices.push(createSlice(sliceNumber, min, max))
     }
 
-    return createPie(slices)
+    return createPie(slices, !!options.yDown)
   }
 }

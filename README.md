@@ -4,11 +4,11 @@ Divide circle into slices and tell what slice a point is in.
 
 ## Install
 
-    npm install pie-slice
+    npm install pie-slice --save
 
 ## Usage
 
-```
+```js
 var pie = require('pie-slice')
 
 var sliced = pie.slice(4)
@@ -32,7 +32,7 @@ Object that may contain:
 
 When false (default) first slice starts at angle 0.
 
-```
+```js
 pie.slice(4, {
   firstSliceFacesUp: false
 })
@@ -44,7 +44,7 @@ pie.slice(4)
 
 When true first slice is bissected by angle 0.
 
-```
+```js
 pie.slice(4, {
   firstSliceFacesUp: true
 });

@@ -66,7 +66,9 @@ Object with x and y Number properties.
 
 ### Returns
 
-Number between 0 and `sliceCount - 1` that is the answer to: if referencePoint is center of pie, what slice is otherPoint in? Slice numbers increase going clockwise.
+Number between 0 and `sliceCount - 1` that is the answer to: if referencePoint is center of pie, what slice is otherPoint in?
+
+Slice numbers increase going clockwise.
 
 ## License
 

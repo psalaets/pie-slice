@@ -30,7 +30,7 @@ Object that may contain:
 
 **firstSliceFacesUp**
 
-When false (default) first slice starts at angle 0.
+When false (which is the default), first slice starts at angle 0.
 
 ```js
 pie.slice(4, {

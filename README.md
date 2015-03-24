@@ -9,16 +9,16 @@ Divide circle into slices and tell what slice a point is in.
 ## Usage
 
 ```js
-var pie = require('pie-slice')
+var pieSlice = require('pie-slice')
 
-var sliced = pie.slice(4)
+var slices = pieSlice.slice(4)
 var ref = {x: 0, y: 0}
 
-sliced.whatSlice(ref, {x: 1, y: 1})   // => 1
-sliced.whatSlice(ref, {x: -1, y: -1}) // => 2
+slices.whatSlice(ref, {x: 1, y: 1})   // => 1
+slices.whatSlice(ref, {x: -1, y: -1}) // => 2
 ```
 
-## .slice(sliceCount, [options])
+## pieSlice.slice(sliceCount, [options])
 
 ### sliceCount
 
@@ -33,28 +33,28 @@ Object that may contain:
 When false (which is the default), first slice starts at angle 0.
 
 ```js
-pie.slice(4, {
+pieSlice.slice(4, {
   firstSliceFacesUp: false
 })
 
 // or just
 
-pie.slice(4)
+pieSlice.slice(4)
 ```
 
 When true first slice is bissected by angle 0.
 
 ```js
-pie.slice(4, {
+pieSlice.slice(4, {
   firstSliceFacesUp: true
 });
 ```
 
 ### Returns
 
-A sliced pie.
+Slices of a pie.
 
-## #whatSlice(referencePoint, otherPoint)
+## slices.whatSlice(referencePoint, otherPoint)
 
 ### referencePoint
 
@@ -66,7 +66,7 @@ Object with x and y Number properties.
 
 ### Returns
 
-The answer to: if referencePoint is center of pie, what slice is otherPoint in?
+Number between 0 and `sliceCount - 1` that is the answer to: if referencePoint is center of pie, what slice is otherPoint in? Slice numbers increase going clockwise.
 
 ## License
 

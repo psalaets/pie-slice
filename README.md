@@ -30,7 +30,9 @@ Object that may contain:
 
 **firstSliceFacesUp**
 
-When false (which is the default), first slice starts at angle 0.
+(default: false)
+
+When false the first slice starts at angle 0.
 
 ```js
 pieSlice.slice(4, {
@@ -49,6 +51,14 @@ pieSlice.slice(4, {
   firstSliceFacesUp: true
 });
 ```
+
+**yDown**
+
+(default: false)
+
+When true, points are interpretted based on y-down coordinates. In y-down coordinates the y values increase going downward.
+
+When false, uses y-up coordinates. In y-up coordinates the y values increase going upward.
 
 ### Returns
 

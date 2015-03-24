@@ -23,41 +23,41 @@ describe('.slice()', function () {
 })
 
 describe('#whatSlice()', function () {
-  // all whatSlice tests use orgin as reference point for simplicity
+  // all whatSlice tests use origin as reference point for simplicity
   var ref = {
     x: 0,
     y: 0
   }
 
   describe('4 slices with first slice at angle 0', function () {
-    var sliced = pie.slice(4)
+    var slices = pie.slice(4)
 
     makeWhatSliceTests([
-      ['point at N',   sliced, ref, {x: 0, y: 1}, 0],
-      ['point at NE',  sliced, ref, {x: 1, y: 1}, 0],
-      ['point at E',   sliced, ref, {x: 1, y: 0}, 1],
-      ['point at SE',  sliced, ref, {x: 1, y: -1}, 1],
-      ['point at S',   sliced, ref, {x: 0, y: -1}, 2],
-      ['point at SW',  sliced, ref, {x: -1, y: -1}, 2],
-      ['point at W',   sliced, ref, {x: -1, y: 0}, 3],
-      ['point at NW',  sliced, ref, {x: -1, y: 1}, 3],
-      ['point at ref', sliced, ref, ref, 1]
+      ['point at N',   slices, ref, {x: 0, y: 1}, 0],
+      ['point at NE',  slices, ref, {x: 1, y: 1}, 0],
+      ['point at E',   slices, ref, {x: 1, y: 0}, 1],
+      ['point at SE',  slices, ref, {x: 1, y: -1}, 1],
+      ['point at S',   slices, ref, {x: 0, y: -1}, 2],
+      ['point at SW',  slices, ref, {x: -1, y: -1}, 2],
+      ['point at W',   slices, ref, {x: -1, y: 0}, 3],
+      ['point at NW',  slices, ref, {x: -1, y: 1}, 3],
+      ['point at ref', slices, ref, ref, 1]
     ])
   })
 
   describe('4 slices with first slice facing up', function () {
-    var upSliced = pie.slice(4, {firstSliceFacesUp: true})
+    var slices = pie.slice(4, {firstSliceFacesUp: true})
 
     makeWhatSliceTests([
-      ['point at N',   upSliced, ref, {x: 0, y: 1}, 0],
-      ['point at NE',  upSliced, ref, {x: 1, y: 1}, 1],
-      ['point at E',   upSliced, ref, {x: 1, y: 0}, 1],
-      ['point at SE',  upSliced, ref, {x: 1, y: -1}, 2],
-      ['point at S',   upSliced, ref, {x: 0, y: -1}, 2],
-      ['point at SW',  upSliced, ref, {x: -1, y: -1}, 3],
-      ['point at W',   upSliced, ref, {x: -1, y: 0}, 3],
-      ['point at NW',  upSliced, ref, {x: -1, y: 1}, 0],
-      ['point at ref', upSliced, ref, ref, 1]
+      ['point at N',   slices, ref, {x: 0, y: 1}, 0],
+      ['point at NE',  slices, ref, {x: 1, y: 1}, 1],
+      ['point at E',   slices, ref, {x: 1, y: 0}, 1],
+      ['point at SE',  slices, ref, {x: 1, y: -1}, 2],
+      ['point at S',   slices, ref, {x: 0, y: -1}, 2],
+      ['point at SW',  slices, ref, {x: -1, y: -1}, 3],
+      ['point at W',   slices, ref, {x: -1, y: 0}, 3],
+      ['point at NW',  slices, ref, {x: -1, y: 1}, 0],
+      ['point at ref', slices, ref, ref, 1]
     ])
   })
 })
